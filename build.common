@@ -8,7 +8,7 @@ then
 fi
 
 # Use gmake instead of make if it exists.
-MAKE=`command -v gmake -j $(nproc) || command -v make -j $(nproc)`
+MAKE=`command -v gmake || command -v make`
 
 PATH="$RISCV/bin:$PATH"
 #GCC_VERSION=`gcc -v 2>&1 | tail -1 | awk '{print $3}'`
@@ -37,7 +37,7 @@ function build_project {
   echo "Configuring project $PROJECT"
   ../configure $* > build.log
   echo "Building project $PROJECT"
-  $MAKE >> build.log
+  $MAKE -j $(nproc) >> build.log
   echo "Installing project $PROJECT"
   $MAKE install >> build.log
   cd - > /dev/null
