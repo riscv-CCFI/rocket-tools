@@ -1,3 +1,4 @@
+#!/bin/sh
 git submodule update --init --recursive
 mkdir TOOLS
 export RISCV=$(pwd)/TOOLS
