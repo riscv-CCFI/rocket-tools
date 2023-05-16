@@ -16,3 +16,6 @@
 [submodule "fsf-binutils-gdb"]
 	path = fsf-binutils-gdb
 	url = https://sourceware.org/git/binutils-gdb.git
+[submodule "riscv-pk"]
+	path = riscv-pk
+	url = https://github.com/riscv-CCFI/riscv-pk.git
