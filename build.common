@@ -8,7 +8,7 @@ then
 fi
 
 # Use gmake instead of make if it exists.
-MAKE=`command -v gmake || command -v make`
+MAKE=`command -v gmake -j $(nproc) || command -v make -j $(nproc)`
 
 PATH="$RISCV/bin:$PATH"
 #GCC_VERSION=`gcc -v 2>&1 | tail -1 | awk '{print $3}'`
