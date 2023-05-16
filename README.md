@@ -1,3 +1,14 @@
+## Se si è arrivati da qua senza vedere le istruzioni ri riscv-CCFI/Rocket-chip:
+per buildare questa cartella lanciare lo script
+
+	$ bash script.sh
+	
+In questa maniera faremo l'update dei submodule di git e poi lanceremo lo script di installazione che andrà a installare tutti i Tool nella cartella TOOLS setteremo anche la variabile $RISCV che è necessario avere per far funzionare rocket-chip
+
+Possibili problemi:
+Poichè con il compilatore modificato l'installazione di pk non andava a buon fine in quanto faceva dei check sul codice generato e non riconosceva le due istruzioni pac e aut, rocket tools viene installato con il compilatore non retTag, questo non dovrebbe essere un problema se non si usano gli eseguibili inclusi in rocket-chip ma si usano gli eseguibili appositamente compilati con il compilatore RetTag, resta da capire se pk faccia uso in qualche maniera del compilatore per la sua compilazione anche se non dovrebbe essere
+
+
 rocket-tools [![Build Status](https://travis-ci.org/chipsalliance/rocket-tools.svg?branch=master)](https://travis-ci.org/chipsalliance/rocket-tools)
 ===========================================================================
 
